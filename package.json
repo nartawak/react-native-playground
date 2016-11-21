@@ -3,16 +3,24 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "rn-cli": "node node_modules/react-native/local-cli/cli.js",
+    "start": "npm run rn-cli -- start",
+    "ios": "npm run rn-cli -- run-ios",
+    "android": "npm run rn-cli -- run-android",
     "test": "jest",
-    "lint": "eslint ./src ./index.*.js --ext .js"
+    "test:coverage": "npm run test -- --coverage",
+    "lint": "eslint ./src ./index.*.js --ext .js --fix"
   },
   "dependencies": {
     "react": "15.3.2",
     "react-native": "0.37.0"
   },
   "jest": {
-    "preset": "jest-react-native"
+    "preset": "jest-react-native",
+    "setupFiles": [
+      "<rootDir>/node_modules/jest-react-native/build/setup.js",
+      "<rootDir>/config/jest/setup-files/index.js"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",

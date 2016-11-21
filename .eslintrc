@@ -39,6 +39,7 @@
     "no-var": 2,
     "operator-assignment": ["error", "always"],
     "prefer-const": "error",
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "import/no-extraneous-dependencies": 0
   }
 }

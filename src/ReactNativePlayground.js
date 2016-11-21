@@ -4,8 +4,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import AbstractComponent from './components/AbstractComponent';
-import { THEME } from './styles/ReactNativePlayground.theme';
+import AbstractComponent from './ui/components/RNPAbstractComponent';
 
 const REACT_NATIVEPLAYGROUND_STYLES = {
   STYLES: {
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: THEME.COLORS.BACKGROUND_COLOR,
+    backgroundColor: AbstractComponent.getTheme().COLORS.BACKGROUND_COLOR,
   },
   welcome: {
     fontSize: 20,
