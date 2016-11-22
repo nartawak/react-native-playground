@@ -1,0 +1,19 @@
+group: "stable",
+dist: "osx",
+os: "osx"
+osx_image: xcode8.1
+
+before_install:
+  - brew update
+  - brew outdated nvm || brew upgrade nvm
+
+install:
+  - mkdir -p /Users/travis/build/nartawak/.nvm
+  - export NVM_DIR="/Users/travis/build/nartawak/.nvm"
+  - brew install nvm
+  - source $(brew --prefix nvm)/nvm.sh
+  - nvm install 6.5
+  - rm -Rf "${TMPDIR}/jest_preprocess_cache"
+  - wget https://github.com/yarnpkg/yarn/releases/download/v0.17.8/yarn-0.17.8.js
+  - export yarn="node $(pwd)/yarn-0.17.8.js"
+  - $yarn install
