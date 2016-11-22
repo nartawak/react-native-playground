@@ -1,6 +1,5 @@
-group: "stable",
-dist: "osx",
 os: "osx"
+language: "objective-c"
 osx_image: xcode8.1
 
 before_install:
