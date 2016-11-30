@@ -1,3 +1,4 @@
 <resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">qvhipWFCtVIsPAohmjV-X-U3eE6741maVsJfz</string>
     <string name="app_name">react_native_playground</string>
 </resources>

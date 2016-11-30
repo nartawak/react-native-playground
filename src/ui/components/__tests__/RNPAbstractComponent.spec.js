@@ -33,11 +33,11 @@ describe('Abstract component', () => {
     expect(AbstractComponent.getTheme().COLORS).toBeDefined();
     expect(AbstractComponent.getTheme().COLORS.BACKGROUND_COLOR).toEqual('#F5FCFF');
   });
-  
+
   it('Should get the device width', () => {
     expect(AbstractComponent.getDeviceWidth()).toEqual(375);
   });
-  
+
   it('Should get the device height', () => {
     expect(AbstractComponent.getDeviceHeight()).toEqual(667);
   });

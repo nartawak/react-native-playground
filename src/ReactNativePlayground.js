@@ -3,7 +3,9 @@ import {
   StyleSheet,
   Text,
   View,
+  AppState,
 } from 'react-native';
+import codePush from 'react-native-code-push';
 import AbstractComponent from './ui/components/RNPAbstractComponent';
 
 const REACT_NATIVEPLAYGROUND_STYLES = {
@@ -41,6 +43,29 @@ const styles = StyleSheet.create({
  * @constructor
  */
 export default class ReactNativePlayground extends AbstractComponent {
+
+  componentDidMount() {
+    const updateDialogOptions = {
+      updateTitle: 'Mise à jour disponible',
+      optionalUpdateMessage: 'Une mise à jour est disponible. Voulez-vous l\'installer ?',
+      optionalIgnoreButtonLabel: 'Non',
+      optionalInstallButtonLabel: 'Oui',
+    };
+    codePush.sync({
+      installMode: codePush.InstallMode.IMMEDIATE,
+      updateDialog: updateDialogOptions,
+    });
+
+    AppState.addEventListener('change', (newState) => {
+      if (newState === 'active') {
+        codePush.sync({
+          installMode: codePush.InstallMode.IMMEDIATE,
+          updateDialog: updateDialogOptions,
+        });
+      }
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -58,3 +83,4 @@ export default class ReactNativePlayground extends AbstractComponent {
     );
   }
 }
+
