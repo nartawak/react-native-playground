@@ -9,7 +9,9 @@
     "android": "npm run rn-cli -- run-android",
     "test": "jest",
     "test:coverage": "npm run test -- --coverage && codecov",
-    "lint": "eslint ./src ./index.*.js --ext .js --fix"
+    "lint": "eslint ./src ./index.*.js --ext .js --fix",
+    "bundle:dev": "bundle install --no-deployment",
+    "bundle:ci": "bundle install --binstubs --clean --deployment"
   },
   "dependencies": {
     "react": "15.3.2",
