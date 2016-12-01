@@ -17,14 +17,22 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    
-    
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+  end
+
+  lane :screenshots do
+    snapshot
   end
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      scheme: "react_native_playground",
+      workspace: "./ios/react_native_playground.xcworkspace",
+      devices: ["iPhone 6s"],
+      clean: true,
+      output_types: "html"
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -50,18 +58,16 @@ platform :ios do
   # You can define as many lanes as you want
 
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    #slack(
+    #  message: "Successfully deployed new App Update."
+    #)
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+    slack(
+      message: exception.message,
+      success: false
+    )
   end
 end
 

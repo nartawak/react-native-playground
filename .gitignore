@@ -53,3 +53,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+/ios/react_native_playgroundTests/SnapshotHelper.swift
+/fastlane/SnapshotHelper2-3.swift
+
+# Cocoapods
+/ios/Pods/
