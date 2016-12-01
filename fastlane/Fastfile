@@ -17,7 +17,7 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+    ENV["SLACK_URL"] = ENV["SLACK_FASTLANE_NARTAWAK_RN_PLAYGROUND"]
   end
 
   lane :screenshots do

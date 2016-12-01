@@ -22,6 +22,7 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		35767ED971B67E47F39DBEAB /* Pods_react_native_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBCE42EC4493013AE7B17F9 /* Pods_react_native_playground.framework */; };
+		380CF9251DF0166700A250E1 /* react_native_playgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* react_native_playgroundTests.m */; };
 		744FDD86D668C3296F5C9552 /* Pods_react_native_playgroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED07962FA966481C4185C745 /* Pods_react_native_playgroundTests.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -772,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380CF9251DF0166700A250E1 /* react_native_playgroundTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
