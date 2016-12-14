@@ -16,6 +16,11 @@ fastlane ios screenshots
 fastlane ios test
 ```
 Runs all the tests
+### ios build
+```
+fastlane ios build
+```
+
 ### ios beta
 ```
 fastlane ios beta
