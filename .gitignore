@@ -38,6 +38,7 @@ npm-debug.log
 
 # Pods
 /ios/Pods/
+yarn-error.log
 
 # BUCK
 buck-out/
