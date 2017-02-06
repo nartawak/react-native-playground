@@ -12,8 +12,8 @@
     "lint": "eslint ./src ./index.*.js --ext .js --fix"
   },
   "dependencies": {
-    "react": "15.3.2",
-    "react-native": "0.37.0"
+    "react": "~15.4.0-rc.4",
+    "react-native": "0.40.0"
   },
   "jest": {
     "preset": "jest-react-native",
