@@ -18,23 +18,23 @@
   "jest": {
     "preset": "jest-react-native",
     "setupFiles": [
-      "<rootDir>/node_modules/jest-react-native/build/setup.js",
+      "<rootDir>/node_modules/react-native/jest/setup.js",
       "<rootDir>/config/jest/setup-files/index.js"
     ]
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
-    "babel-jest": "17.0.2",
-    "babel-preset-react-native": "1.9.0",
+    "babel-jest": "18.0.0",
+    "babel-preset-react-native": "1.9.1",
     "codecov": "^1.0.1",
     "eslint": "3.6.0",
     "eslint-config-airbnb": "12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "2.2.2",
     "eslint-plugin-react": "6.3.0",
-    "eslint-plugin-react-native": "^2.0.0",
-    "jest": "17.0.3",
-    "jest-react-native": "17.0.3",
-    "react-test-renderer": "15.3.2"
+    "eslint-plugin-react-native": "^2.2.1",
+    "jest": "18.1.0",
+    "jest-react-native": "18.0.0",
+    "react-test-renderer": "~15.4.0-rc.4"
   }
 }

@@ -35,10 +35,10 @@ describe('Abstract component', () => {
   });
 
   it('Should get the device width', () => {
-    expect(AbstractComponent.getDeviceWidth()).toEqual(375);
+    expect(AbstractComponent.getDeviceWidth()).toEqual(750);
   });
 
   it('Should get the device height', () => {
-    expect(AbstractComponent.getDeviceHeight()).toEqual(667);
+    expect(AbstractComponent.getDeviceHeight()).toEqual(1334);
   });
 });
