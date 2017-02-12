@@ -1,40 +1,39 @@
 {
-  "name": "react_native_playground",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "rn-cli": "node node_modules/react-native/local-cli/cli.js",
-    "start": "npm run rn-cli -- start",
-    "ios": "npm run rn-cli -- run-ios",
-    "android": "npm run rn-cli -- run-android",
-    "test": "jest",
+	"name": "react_native_playground",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"ios": "react-native run-ios",
+		"android": "react-native run-android",
+		"test": "jest",
     "test:coverage": "npm run test -- --coverage && codecov",
     "lint": "eslint ./src ./index.*.js --ext .js --fix"
-  },
-  "dependencies": {
-    "react": "~15.4.0-rc.4",
-    "react-native": "0.41.2"
-  },
-  "jest": {
-    "preset": "jest-react-native",
-    "setupFiles": [
-      "<rootDir>/node_modules/react-native/jest/setup.js",
-      "<rootDir>/config/jest/setup-files/index.js"
-    ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "babel-jest": "18.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "codecov": "^1.0.1",
-    "eslint": "3.6.0",
+	},
+	"dependencies": {
+		"codecov": "^1.0.1",
+		"react": "~15.4.0",
+		"react-native": "0.41.2"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.0.0",
+		"babel-jest": "18.0.0",
+		"babel-preset-react-native": "1.9.1",
+		"codecov": "^1.0.1",
+		"eslint": "3.6.0",
     "eslint-config-airbnb": "12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "2.2.2",
     "eslint-plugin-react": "6.3.0",
     "eslint-plugin-react-native": "^2.2.1",
-    "jest": "18.1.0",
-    "jest-react-native": "18.0.0",
-    "react-test-renderer": "~15.4.0-rc.4"
-  }
+		"jest": "18.1.0",
+		"react-test-renderer": "~15.4.0"
+	},
+	"jest": {
+		"preset": "react-native",
+		"setupFiles": [
+			"<rootDir>/node_modules/react-native/jest/setup.js",
+			"<rootDir>/config/jest/setup-files/index.js"
+		]
+	}
 }
